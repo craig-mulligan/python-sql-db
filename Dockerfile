@@ -1,12 +1,9 @@
-FROM resin/rpi-raspbian:jessie
-# Install Python.
-RUN apt-get update \
-	&& apt-get install -y python \
-	# Remove package lists to free up space
-	&& rm -rf /var/lib/apt/lists/*
+FROM /resin/raspberrypi2-python
+
+RUN pip install sqlalchemy psutil
 
 # copy current directory into /app
 COPY . /app
 
 # run python script when container lands on device
-CMD ["python", "/app/hello.py"]
+CMD ["start", "/app/start.sh"]
