@@ -1,4 +1,4 @@
-FROM /resin/raspberrypi2-python
+FROM resin/raspberrypi2-python
 
 RUN pip install sqlalchemy psutil
 
