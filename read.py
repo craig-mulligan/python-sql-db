@@ -1,5 +1,5 @@
 from db_setup import Reading
-import datetime
+import time
 import psutil
 
 def log():
