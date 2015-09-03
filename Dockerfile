@@ -6,4 +6,4 @@ RUN pip install sqlalchemy psutil
 COPY . /app
 
 # run python script when container lands on device
-CMD ["start", "/app/start.sh"]
+CMD ["bash", "/app/start.sh"]
