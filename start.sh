@@ -1,0 +1,1 @@
+cd /app && python db_setup.py && python read.py
