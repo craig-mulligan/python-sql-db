@@ -4,8 +4,7 @@ import psutil
 
 def log():
 	cpu = psutil.cpu_percent()
-	now = time.strftime('%Y-%m-%d %H:%M:%S')
-	newLog = Reading(reading=cpu, timestamp=now)	
+	newLog = Reading(reading=cpu)	
 	session.add(newLog)
 	session.commit()
 

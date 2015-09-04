@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import os
 import sys
+import datetime
 from sqlalchemy import Column, Integer, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
@@ -14,7 +15,7 @@ class Reading(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     reading = Column(Integer, nullable=False)
-    timestamp = Column(DateTime, nullable=False)
+    timestamp = Column(DateTime, default=datetime.datetime.now)
     
     # This will be used when we implement an API that returns json
     @property
