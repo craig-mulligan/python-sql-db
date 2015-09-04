@@ -4,9 +4,10 @@ import psutil
 
 def log():
 	cpu = psutil.cpu_percent()
-	newLog = Reading(reading=cpu)	
+	newLog = Reading(reading=cpu)
 	session.add(newLog)
 	session.commit()
+	print "new log!"
 
 if __name__ == '__main__':
     log()
