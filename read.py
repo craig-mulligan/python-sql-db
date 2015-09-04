@@ -10,7 +10,7 @@ def log():
 	print "new log!"
 	readings = session.query(Reading).all()
 	for r in readings:
-		print "CPU: " + r.reading + "stamp: " + r.timestamp
+		print "CPU: " + str(r.reading) + "stamp: " + str(r.timestamp)
 
 if __name__ == '__main__':
     log()
