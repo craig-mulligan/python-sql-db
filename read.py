@@ -2,9 +2,6 @@ from db_setup import Reading, session
 import time
 import psutil
 
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
-
 def log():
 	cpu = psutil.cpu_percent()
 	ts = time.time()
