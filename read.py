@@ -8,6 +8,7 @@ def log():
 	session.add(newLog)
 	session.commit()
 	print "new log!"
+	print session.query(Reading).all()
 
 if __name__ == '__main__':
     log()
