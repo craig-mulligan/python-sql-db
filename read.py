@@ -12,6 +12,6 @@ def log():
 	for r in readings:
 		print "CPU: " + str(r.reading) + ", stamp: " + str(r.stamp)
 
-if __name__ == '__main__':
+while True:
     log()
     time.sleep(30)
