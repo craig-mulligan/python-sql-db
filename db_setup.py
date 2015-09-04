@@ -14,8 +14,8 @@ class Reading(Base):
     # Here we define columns for the table person
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    reading = Column(Integer, nullable=False)
-    timestamp = Column(DateTime, default=datetime.datetime.now)
+    reading = Column(Float, nullable=False)
+    stamp = Column(DateTime, default=datetime.datetime.now)
     
     # This will be used when we implement an API that returns json
     @property
