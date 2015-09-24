@@ -28,8 +28,8 @@ class Reading(Base):
         }
  
 # Create an engine that stores data in the local directory's
-# sqlalchemy_example.db file.
-engine = create_engine('sqlite:///../data/sensor.db')
+# readings.db file.
+engine = create_engine('sqlite:///../data/readings.db')
  
 # Create all tables in the engine. This is equivalent to "Create Table"
 # statements in raw SQL.
